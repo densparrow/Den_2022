@@ -1,8 +1,10 @@
 from django.shortcuts import render
-
+from .models import Task
 
 def index(request):
-    return render(request, 'main/index.html')
+    tasks = Task.objects.all()
+    created_on = Task.objects.all()
+    return render(request, 'main/index.html', {'title': 'Главная страница', 'tasks': tasks, 'created_on': created_on})
 
 
 def about(request):
