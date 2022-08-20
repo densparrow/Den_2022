@@ -13,3 +13,7 @@ def about(request):
 
 def my_page(request):
     return render(request, 'main/my_page.html')
+
+
+def create(request):
+    return render(request, 'main/create.html')

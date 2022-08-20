@@ -1,0 +1,25 @@
+{%extends 'main/base.html'%}
+
+{%block title%}
+     Создать новую задачу
+{%endblock%}
+
+
+{%block content%}
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold">Создать новую задачу</h1>
+    <br>
+    <div class="col-lg-6 mx-auto">
+
+      <form method="post">
+        <input type="text" placeholder="Введите название" class="form-control"><br>
+        <textarea type="text" placeholder="Введите описание" class="form-control"></textarea><br>
+    </form>
+
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Добавить</button>
+      </div>
+    </div>
+  </div>
+{%endblock%}
+<button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
