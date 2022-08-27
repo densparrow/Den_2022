@@ -12,18 +12,14 @@
     <div class="col-lg-6 mx-auto">
 
       <form method="post">
-        <input type="text" placeholder="Введите название" class="form-control"><br>
-        <textarea type="text" placeholder="Введите описание" class="form-control"></textarea><br>
-        <p>
-            <label for="date">Дата завершения:</label>
-            <input type="date" id="date" name="date"/>
-        </p>
-
-    </form>
-
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Добавить</button>
-      </div>
+          {% csrf_token %}
+          {{form.title}}<br>
+          {{form.task}}<br>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Добавить</button>
+        </div>
+          <span> {{error}}</span>
+      </form>
     </div>
   </div>
 {%endblock%}
