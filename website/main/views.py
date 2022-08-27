@@ -5,6 +5,7 @@ from .forms import TaskForm
 
 def index(request):
     tasks = Task.objects.order_by('-created_on')
+    category = Task.objects.all()
     created_on = Task.objects.all()
     return render(request, 'main/index.html', {'title': 'Главная страница', 'tasks': tasks, 'created_on': created_on})
 
